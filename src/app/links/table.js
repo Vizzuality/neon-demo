@@ -44,7 +44,7 @@ export default function LinksHTMLTable() {
                         {link.url}
                     </Table.Cell>
                     <Table.Cell>
-                        https://jref.io/{link.short}
+                        {process.env.NEXT_PUBLIC_VERCEL_URL}{link.short}
                     </Table.Cell>
                 
                 </Table.Row>
