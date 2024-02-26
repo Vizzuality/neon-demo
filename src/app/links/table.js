@@ -25,6 +25,9 @@ export default function LinksHTMLTable() {
          <Table>
             <Table.Head>
                 <Table.HeadCell>
+                Featured
+                </Table.HeadCell>
+                <Table.HeadCell>
                 ID
                 </Table.HeadCell>
                 <Table.HeadCell>
@@ -37,6 +40,9 @@ export default function LinksHTMLTable() {
         <Table.Body  className="divide-y">
             {data && data.map((link, idx)=>{
                 return <Table.Row key={`link-${idx}`} className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <Table.Cell>
+                        TODO: add featured flag
+                    </Table.Cell>
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                         {link.id}
                     </Table.Cell>
