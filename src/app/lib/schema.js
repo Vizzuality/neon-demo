@@ -1,5 +1,5 @@
 import { relations } from 'drizzle-orm'
-import { uniqueIndex, timestamp, text, pgTable, serial, varchar, integer} from 'drizzle-orm/pg-core'
+import { uniqueIndex, timestamp, text, pgTable, serial, varchar, integer, boolean} from 'drizzle-orm/pg-core'
 
 
 export const UsersTable = pgTable("users", {
@@ -26,6 +26,7 @@ export const LinksTable = pgTable("links", {
     url: text("url").notNull(), 
     short: varchar("short", {length: 50}),
     userId: integer('user_id').references(()=>UsersTable.id),
+    featured: boolean("featured").default(false),
     createdAt: timestamp("created_at").defaultNow()
 })
 
